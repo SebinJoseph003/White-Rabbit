@@ -1,0 +1,48 @@
+*{
+    @include globalReset();
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+ul,li{
+    @include reset-list();
+}
+
+.container {
+    @include respond-above(lg) {
+        max-width: 1460px;
+    }
+}
+
+.d-flex {
+    flex-direction: column;
+    &.do-not-break {
+        flex-direction: row;
+    }
+    @include respond-above(sm){
+        flex-direction: row;
+    }
+}
+
+.section-title {
+    max-width: 800px;
+    margin-top: 165px;
+    h2 {
+        color: $primary-color;
+        @include respond-below(xl){
+            // margin-bottom: 15px;
+        }
+    }
+}
+
+

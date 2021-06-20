@@ -1,0 +1,127 @@
+header {
+    height: 150px;
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    .container-fluid {
+        height: inherit;
+        padding-right: 16px;
+        padding-left: 16px;
+        @include respond-above(sm){
+            padding-right: 100px;
+            padding-left: 100px;
+        }
+        .header-row {
+            height: inherit;
+            .brand{
+                max-width: 95px;
+                #hamberger-menu {
+                    display: none;
+                    margin-right: 16px;
+                    @include respond-below(sm){
+                        display: block;
+                    }
+                    #pencet{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        cursor: pointer;
+                        width: 32px;
+                        height: 34.5px;
+        
+                        span{
+                            background-color:ghostwhite;
+                            width:2em;
+                            height:.2em;
+                            margin:0.26em 0;
+                            display:block;
+                            transition: transform .4s ease;
+                            transform-origin:0 0;
+                          }
+                        &.close span:nth-child(1) {
+                            transform: rotate(45deg) translate(1px, -1px);
+                          }
+                          
+                        &.close span:nth-child(2) {
+                            transform: scaleX(0);
+                          }
+                          
+                        &.close span:nth-child(3) {
+                            transform: rotate(-45deg) translate(1px, 0);
+                          }  
+                      }
+                }
+            }
+            .nav-links {
+                ul {
+                    @include respond-below(sm) {
+                        position: absolute;
+                        background: #102421;
+                        width: 100vw;
+                        height: 100vh;
+                        left: 0;
+                        top: 115px;
+                        z-index: 33;
+                        transform: translateY(-150%);
+                        transition: transform ease 0.3s;
+                        &.active {
+                            transform: translateY(0);
+                        }
+                    }
+                    @include respond-above(sm) {
+                        margin-right: 1vw;
+                    }
+                    @include respond-above(md) {
+                        margin-right: 15vw;
+                    }
+                    @include respond-above(lg) {
+                        margin-right: 21vw;
+                    }
+                    @include respond-above(xxl) {
+                        margin-right: 85px;
+                    }
+                    li{
+                        display: block;
+                        padding: 30px 100px;
+                        @include respond-above(sm) {
+                            display: inline-block;
+                            padding: 0 17.5px;
+                        }
+                        a {
+                            color: $light-color;
+                            font-weight: $font-medium;                            
+                            @include respond-above(xxl) {
+                                color: $primary-color;
+                            }
+                        }
+                    }
+                }
+                .account {
+                    margin-right: 55px;
+                }
+                .cart {
+                    display: flex;
+                    align-items: center;
+                    a:first-child {
+                        background: $primary-color;
+                        padding: 5px;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 8px;
+                        p {
+                            color: $light-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

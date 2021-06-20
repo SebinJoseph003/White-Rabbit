@@ -1,0 +1,56 @@
+.primary-link-btn {    
+        font-size: 14px;
+        font-weight: $font-regular;
+        color: $button-text;
+        background-color: $button-bg;
+        padding: 10px 15px;
+        border-radius: 48px;
+        display: inline-block;
+        transition: transform ease .3s;
+        cursor: pointer;
+        @include respond-above(md){
+            padding: 16px 20px;
+        }
+        @include respond-above(md){
+            padding: 20px 27px;
+        }
+        // @include respond-below(xs) {
+        //     padding: 1px 25px 16px;
+        // }
+
+        // @include respond-between(sm,md) {
+        //     padding: 5px 25px;
+        // }
+
+        // @include respond-above(xl) {
+        //     font-size: 15px;
+        //     padding: 15px 30px;
+        // }
+
+     &:hover {
+         transform: translateY(-20px);
+         color: $button-text;
+     }
+}
+
+.secondary-link-btn {
+    @extend.primary-link-btn;
+    border: 1px solid #102421;
+    border-radius: 30px;
+    color: $primary-color !important;
+    background-color: $light-color; 
+    &.alternate {
+        color: $light-color !important;
+        background-color: $secondary-color;     
+    }
+    img {
+        transition: transform ease 0.3s;
+        margin-left: 30px;
+    }   
+    &:hover {
+        transform: translateY(0);
+        img {
+            transform: translateX(20px);
+        }
+    }
+}

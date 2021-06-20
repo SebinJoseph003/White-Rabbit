@@ -1,0 +1,122 @@
+section.hero {
+    .container {
+        .hero-section {
+            .text-area {
+                background: $secondary-color;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 660px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                text-align: left;
+                z-index: 1;
+                @include respond-above(sm) {  
+                    width: 70vw;                  
+                    height: 586px;
+                }
+                @include respond-above(md) {
+                    width: 65vw;
+                    height: 736px;
+                }
+                @include respond-above(lg) {                    
+                    height: 836px;
+                }
+                @include respond-above(xl) {                    
+                    height: 1050px;
+                }
+                .text-contents {
+                    max-width: 500px;
+                    text-align: left;
+                    padding: 0 16px;
+                    p{
+                        color: $banner-text; 
+                        &:first-child {
+                            letter-spacing: 8px;
+                            font-weight: $font-medium;
+                        }                    
+                    }
+                    h1 {
+                        max-width: 364px;
+                        margin-top: 20px;
+                        color: $light-color;
+                        @include respond-above(sm) {
+                            max-width: 360px;
+                        }
+                        @include respond-above(lg) {
+                            max-width: 500px;
+                        }
+                        & + p {
+                            margin-top: 20px;
+                            font-size: 22px;
+                            max-width: 300px;
+                            line-height: 26px;
+                            @include respond-above(sm) {
+                                max-width: 300px;
+                            }
+                            @include respond-above(xl) {
+                                margin-top: 60px;
+                            }
+                        }
+                    }
+                    .cta-btns{
+                        margin-top: 50px;
+                        flex-direction: row;
+                        @include respond-above(sm) {
+                            margin-top: 30px;
+                        }
+                        @include respond-above(md) {
+                            margin-top: 50px;
+                        }
+                        @include respond-above(lg) {
+                            margin-top: 75px;
+                        }
+                        @include respond-above(xl) {
+                            margin-top: 100px;
+                        }
+                        a:first-child{  
+                            margin-right: 8px;                          
+                            @include respond-above(sm) {
+                                margin-right: 50px;
+                            }
+                        }
+                    }
+                }
+                
+            }
+            .img-area {
+                max-width: 295px;
+                position: absolute;
+                left: 50%;
+                top: 55%;
+                transform: translateX(-50%);
+                z-index: 3;
+                margin-left: auto;
+                @include respond-above(sm) {
+                    left: auto;
+                    right: 16px;
+                    top: 150px;
+                    right: -18%;
+                }
+                @include respond-above(md) {
+                    max-width: 443px;
+                    right: -18%;
+                }
+                @include respond-above(lg) {
+                    max-width: 526px;
+                    right: -16%;
+                }
+                @include respond-above(xl) {
+                    max-width: 686px;
+                    right: -16%;
+                }
+                @include respond-above(xxl) {
+                    max-width: 800px;
+                }
+            }
+        }
+    }
+}

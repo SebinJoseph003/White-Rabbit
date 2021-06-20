@@ -1,0 +1,30 @@
+section.benefits {
+    .container {
+        .benefits-sec {
+            margin-top: 100px;
+            max-width: 1050px;
+            align-items: center;
+            .benefit-one {
+                max-width: 250px;
+                text-align: center;
+                @include respond-below(sm) {
+                    margin-bottom: 40px;
+                }
+                @include respond-above(sm) {
+                    margin-right: 165px;
+                }
+                &:nth-child(3){
+                    margin-right: 0px;
+                }
+                .text-area {
+                    margin-top: 70px;
+                    p {
+                        color: $primary-color;
+                        font-size: 18px;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

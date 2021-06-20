@@ -1,0 +1,140 @@
+section.products {
+    margin-top: 1160px;
+    &.vitamins {
+        margin-top: 160px;
+    }
+    .container {
+        .section-title {
+            a {
+                top: -10px;
+                right: -44%;
+            }
+        }
+        &.f-w {
+            max-width: 1720px;
+            padding-left: 100px;
+            padding-right: 100px;
+            margin-right: 0;
+            margin-left: 0px;
+        }
+        .row {
+            margin-top: 100px;
+            .col-md-3 {
+                position: relative;
+                flex: 1 1 296px;                
+                transition: transform ease 0.3s;   
+                @include respond-above(sm){
+                    margin-right: 86px;
+                }             
+                &:nth-child(4) {
+                    margin-right: 0px;
+                }
+                &:hover {
+                    transform: translateY(-20px);
+                }
+                &:hover {
+                    .text-area {
+                        p.hover-text{
+                            opacity: 1;
+                        }
+                    }
+                }
+                .img-area {
+                    max-width: 296px;
+                    &.vitamins{
+                        max-width: 433px;
+                    }
+                }
+                .text-area {                    
+                    * {
+                        color: $text-color;
+                    }
+                    h3 {
+                        color: $primary-color;
+                        margin-top: 35px;
+                    }
+                    p {
+                        margin-top: 20px;
+                        &:nth-child(2) {
+                            max-width: 210px;
+                            font-weight: $font-medium;
+                            font-size: 16px;
+                            line-height: 24px;
+                        }
+                        &.hover-text {
+                            position: absolute;
+                            width: 82px;
+                            height: 82px;
+                            border-radius: 50%;
+                            background: $secondary-color;                            
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            top: 60px;
+                            right: 45px;
+                            opacity: 0;
+                            transition: opacity ease 0.3s;
+                            a{
+                                color: $light-color;
+                                font-weight: $font-medium;
+                                font-size: 12px;
+                                line-height: 14px;
+                            }                            
+                        }
+                    }
+                }
+            }
+            .col-md-4 {
+                flex: 1 1 433px;                
+                @include respond-above(sm){
+                    margin-right: 66px;
+                }
+                &:nth-child(3) {
+                     margin-right: 0;
+                }
+                .img-area {
+                    max-width: 433px;
+                }
+                .text-area {                    
+                    * {
+                        color: $text-color;
+                    }
+                    h3 {
+                        color: $primary-color;
+                        margin-top: 35px;
+                    }
+                    p {
+                        margin-top: 20px;
+                        max-width: 210px;
+                        &:nth-child(2) {
+                            max-width: 210px;
+                            font-weight: $font-medium;
+                            font-size: 16px;
+                            line-height: 24px;
+                        }
+                        &.hover-text {
+                            position: absolute;
+                            width: 82px;
+                            height: 82px;
+                            border-radius: 50%;
+                            background: $secondary-color;                            
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            top: 60px;
+                            right: 45px;
+                            opacity: 0;
+                            transition: opacity ease 0.3s;
+                            a{
+                                color: $light-color;
+                                font-weight: $font-medium;
+                                font-size: 12px;
+                                line-height: 14px;
+                            }                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
